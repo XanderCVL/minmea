@@ -10,7 +10,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "minmea.h"
+#include "../include/minmea/minmea.h"
 
 #define INDENT_SPACES "  "
 

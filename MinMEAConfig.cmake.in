@@ -1,0 +1,20 @@
+################################################################################
+# PotholeDetection source dir
+set(MinMEA_SOURCE_DIR "@PROJECT_SOURCE_DIR@")
+
+################################################################################
+# PotholeDetection build dir
+set(MinMEA_DIR "@CMAKE_INSTALL_PREFIX@")
+
+################################################################################
+# Compute paths
+get_filename_component(MinMEA_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+set(MinMEA_INCLUDE_DIRS  "${MinMEA_DIR}/include")
+file(GLOB MinMEA_LIBS  "${MinMEA_DIR}/lib/static/lib*" "${MinMEA_DIR}/lib/shared/lib*")
+set(MinMEA_BINS  "${MinMEA_DIR}/bin")
+
+message(STATUS "MinMEA found.")
+message(STATUS "\t Headers: ${MinMEA_INCLUDE_DIRS}")
+message(STATUS "\t Libraries: ${MinMEA_LIBS}")
+message(STATUS "\t Binaries: ${MinMEA_BINS}")

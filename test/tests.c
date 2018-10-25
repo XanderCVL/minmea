@@ -14,7 +14,7 @@
 #include <math.h>
 #include <check.h>
 
-#include "minmea.h"
+#include "minmea/minmea.h"
 
 static const char *valid_sentences_nochecksum[] = {
     "$GPTXT,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",

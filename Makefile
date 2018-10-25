@@ -12,7 +12,7 @@ LDLIBS += $(shell pkg-config --libs check)
 all: scan-build test example
 	@echo "+++ All good."""
 
-test: tests
+test: test
 	@echo "+++ Running Check test suite..."
 	./tests
 
@@ -25,7 +25,7 @@ clean:
 
 tests: tests.o minmea.o
 example: example.o minmea.o
-tests.o: tests.c minmea.h
-minmea.o: minmea.c minmea.h
+tests.o: test include/minmea/minmea.h
+minmea.o: src/minmea.c include/minmea/minmea.h
 
 .PHONY: all test scan-build clean
