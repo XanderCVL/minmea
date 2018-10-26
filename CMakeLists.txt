@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-project(MinMEA)
+project(MiNMEA)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
@@ -8,7 +8,7 @@ include_directories(
 )
 
 # Create Library
-add_library(MinMEA SHARED src/minmea.c)
+add_library(MiNMEA SHARED src/minmea.c)
 
 set(PUBLIC_HEADERS
         include/minmea/minmea.h
@@ -16,14 +16,14 @@ set(PUBLIC_HEADERS
         include/minmea/ti-rtos.h
         )
 
-set_target_properties(MinMEA PROPERTIES
+set_target_properties(MiNMEA PROPERTIES
         PREFIX "lib"
         OUTPUT_NAME "minmea"
         PUBLIC_HEADER "${PUBLIC_HEADERS}"
         )
 
 
-install(TARGETS         MinMEA
+install(TARGETS         MiNMEA
         ARCHIVE         DESTINATION         "lib/static"
         LIBRARY         DESTINATION         "lib/shared"
         RUNTIME         DESTINATION         "bin"
